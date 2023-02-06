@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+nav {
+    font-size: 36px;
+    background-color: rgb(55, 151, 183);
+}
+
+nav span {
+    font-size: 48px;
+    font-style: italic;
+    font-weight: 800;
+}
+
+nav p {
+    color: aliceblue;
+}
+
+.card-body {
+    width: 350px;
+}
+
+input,
+button {
+    height: 60px;
+}
+
+.submit {
+    width: 100px;
+}
+
+.current {
+    height: 250px;
+}
+
+.forecast {
+    height: 350px;
+}
