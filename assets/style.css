@@ -23,7 +23,7 @@ nav p {
 
 input,
 button {
-    height: 60px;
+    height: 59px;
 }
 
 .submit {
@@ -34,6 +34,32 @@ button {
     height: 250px;
 }
 
+#currentCond {
+    font-size: 24px;
+    font-weight: 600;
+    color: rgb(55, 151, 183);
+}
+
 .forecast {
     height: 350px;
+}
+
+#fiveDay {
+    font-size: 24px;
+    font-weight: 600;
+    color: rgb(55, 151, 183);
+}
+
+footer {
+    height: 100px;
+    background-color: rgb(55, 151, 183);
+    margin: 10px 0px 0px 0px;
+}
+
+blockquote {
+    text-align: center;
+    padding-top: 30px;
+    font-size: 24px;
+    font-weight: 600;
+    color: aliceblue;
 }

@@ -21,10 +21,10 @@
     <sidebar>
         <div class="card float-left">
             <div class="card-body">
-                Enter the city you would like to know the weather for, and click Search:
+                Enter the city you would like to know the weather for, in the format shown, and click Search:
             </div>
             <form class="form-inline">
-                <input class=" search form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <input id="search" class=" search form-control mr-sm-2" type="search" placeholder="City, State Code, Country" aria-label="Search">
                 <button class="submit btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
             </form>
             <div class="btn-group-vertical">
@@ -42,20 +42,22 @@
 
     <main>
         <div class=current>
-            <div class="d-flex p-2">Current Conditions</div>
+            <div id="currentCond" class="d-flex p-2">Current Conditions</div>
         </div>
         <hr>
         <div class=forecast>
-            <div class="d-flex p-2">Five Day Forecast</div>
+            <div id="fiveDay" class="d-flex p-2">Five Day Forecast</div>
         </div>
     </main>
 
     <footer>
-
+        <blockquote>When the weather is hot, keep a cool mind. When the weather is cold, keep a warm heart. -Proverb
+        </blockquote>
     </footer>
 
 
 </body>
+<script> src = "assets/script.js"</script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
