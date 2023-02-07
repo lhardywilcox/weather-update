@@ -5,7 +5,7 @@ var cityLon = 0;
 
 function getCoord() {
     var cityState = document.getElementById('search').value;
-    var requestUrl = 'http://api.openweathermap.org/geo/1.0/direct?q=' + cityState + '&appid=62b2ebee1dd3d81b4b4a10b045e5f835'
+    var requestUrl = 'http://api.openweathermap.org/geo/1.0/direct?q=' + cityState + '&appid=APIkey
 
     fetch(requestUrl)
         .then(function (response) {
