@@ -1,6 +1,6 @@
-* {
+/* * {
     box-sizing: border-box;
-}
+} */
 
 nav {
     font-size: 36px;
@@ -37,7 +37,25 @@ button {
 #currentCond {
     font-size: 24px;
     font-weight: 600;
+    font-style: italic;
+    margin-bottom: 30px;
     color: rgb(55, 151, 183);
+}
+
+#currentWeather {
+    color: rgb(55, 151, 183);
+    text-align: center;
+}
+
+#currentWeather img {
+    float: right;
+    margin-right: 200px;
+    width: 250px;
+    height: 200px;
+}
+
+#currentWeather h3 {
+    margin-bottom: 25px;
 }
 
 .forecast {
@@ -47,8 +65,9 @@ button {
 #fiveDay {
     font-size: 24px;
     font-weight: 600;
+    font-style: italic;
     color: rgb(55, 151, 183);
-}
+} 
 
 footer {
     height: 100px;
