@@ -73,6 +73,21 @@ $(document).ready(function () {
 
                         console.log(data);
 
+                        const fcIcon = document.createElement("img");
+                        fcIcon.src = `http://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@2x.png`;
+                        const fcDescript = document.createElement("ul");
+                        const fcTemp = document.createElement("li");
+                        const fcPop = document.createElement("li");
+
+                        fcDescript.textContent = data.list[0].weather[0].description;
+                        fcTemp.textContent = "Temperature:  " + data.list[0].main.temp;
+                        fcPop.textContent = "Chance of Preciptation:  " + data.list[0].pop * 100 + "%";
+
+                        fcCard.appendChild(fcIcon);
+                        fcCard.appendChild(fcDescript);
+                        fcCard.appendChild(fcTemp);
+                        fcCard.appendChild(fcPop);
+
                     })
                     .catch(function (err) {
                         console.log("Something's wrong: " + err);
