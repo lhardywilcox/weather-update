@@ -17,7 +17,7 @@ $(document).ready(function () {
         console.log(cityState.value);
         const userInput = cityState.value.replaceAll(" ", "");
 
-        let requestUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${userInput}&appid=${apiKey}`;
+        let requestUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${userInput}&appid=${apiKey}`;
 
         fetch(requestUrl)
             .then(function (response) {
@@ -41,7 +41,7 @@ $(document).ready(function () {
                         console.log(data);
 
                         const icon = document.createElement("img");
-                        icon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+                        icon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
                         const descript = document.createElement("h3");
                         const temp = document.createElement("p");
                         const press = document.createElement("p");
@@ -75,7 +75,7 @@ $(document).ready(function () {
 
                         const fcIcon = document.createElement("img");
                         fcIcon.class = "card-img-top"
-                        fcIcon.src = `http://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@2x.png`;
+                        fcIcon.src = `https://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@2x.png`;
 
                         const fcDescript = document.createElement("ul");
                         const fcTemp = document.createElement("li");
