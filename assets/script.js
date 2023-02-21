@@ -72,24 +72,32 @@ $(document).ready(function () {
                     .then(function (data) {
 
                         console.log(data);
+                        var cardCount = 1;
 
-                        const fcIcon = document.createElement("img");
-                        fcIcon.class = "card-img-top"
-                        fcIcon.src = `https://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@2x.png`;
+                        for (var index = firstDay(data.list); index < data.list.length; index += 8) {
 
-                        const fcDescript = document.createElement("ul");
-                        const fcTemp = document.createElement("li");
-                        const fcPop = document.createElement("li");
+                            var currentDay = data.list[index];
 
-                        fcDescript.textContent = data.list[0].weather[0].description;
-                        fcTemp.textContent = "Temperature:  " + data.list[0].main.temp;
-                        fcPop.textContent = "Chance of Preciptation:  " + data.list[0].pop * 100 + "%";
+                            const fcIcon = document.createElement("img");
+                            fcIcon.class = "card-img-top"
+                            fcIcon.src = `https://openweathermap.org/img/wn/${currentDay.weather[0].icon}@2x.png`;
 
-                        fcCard1.appendChild(fcIcon);
-                        fcCard1.appendChild(fcDescript);
-                        fcCard1.appendChild(fcTemp);
-                        fcCard1.appendChild(fcPop);
+                            const fcDescript = document.createElement("ul");
+                            const fcTemp = document.createElement("li");
+                            const fcPop = document.createElement("li");
 
+                            fcDescript.textContent = currentDay.weather[0].description;
+                            fcTemp.textContent = "Temperature:  " + currentDay.main.temp;
+                            fcPop.textContent = "Chance of Preciptation:  " + currentDay.pop * 100 + "%";
+
+                            var fcCard = document.getElementById(`fcCard${cardCount}`);
+                            
+                            fcCard.appendChild(fcIcon);
+                            fcCard.appendChild(fcDescript);
+                            fcCard.appendChild(fcTemp);
+                            fcCard.appendChild(fcPop);
+                            cardCount++;
+                        }
                     })
 
                     .catch(function (err) {
@@ -102,5 +110,9 @@ $(document).ready(function () {
                 console.log("Something's wrong: " + err);
             });
     };
-
+    function firstDay(dataArray) {
+        for (var i = 0; i < dataArray.length; i++) {
+            if (dataArray[i].sys.pod === 'd') return i
+        }
+    }
 });
